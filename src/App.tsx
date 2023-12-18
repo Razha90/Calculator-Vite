@@ -122,14 +122,16 @@ function App() {
 
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
-      // alert(event.key)
       symbol.forEach((item) => {
-        if (event.key === item.id) {
-          document.getElementById(item.id).click()
-          // document.querySelector(`#${item.id}`).click()
+        const element = document.getElementById(item.id);
+        if (item.id == event.key) {
+          if (element) {
+            element.click();
+          }
         }
       });
-    }    
+    };
+    
     window.addEventListener("keydown", handleKeyPress);
 
     return () => {

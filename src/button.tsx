@@ -15,7 +15,7 @@ interface ButtonProps {
     SetDecimal: React.Dispatch<React.SetStateAction<boolean>>,
 };
 
-function Button( {id,isDecimal, SetDecimal ,display, setDisplay ,setOperator, operator ,input,setInput,text, symbol, className, setResult, result}: ButtonProps) {
+function Button( {id,isDecimal, SetDecimal ,display, setDisplay ,setOperator, operator ,input,setInput,text, symbol, className, setResult}: ButtonProps) {
     function saveInput() {
         if ((input == "" && symbol == "0")|| (input == "" && symbol == ".") ) {
             return;
